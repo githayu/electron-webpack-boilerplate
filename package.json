@@ -1,0 +1,61 @@
+{
+  "name": "electron-webpack-boilerplate",
+  "version": "1.0.0",
+  "main": "out/main/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx cross-env NODE_ENV=development webpack serve",
+    "build": "npx cross-env NODE_ENV=production webpack && electron-builder",
+    "test": "jest"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "out/main"
+    ],
+    "execMap": {
+      "js": "electron ."
+    }
+  },
+  "build": {
+    "appId": "io.hayu.electron-webpack-boilerplate",
+    "productName": "Electron Webpack Boilerplate",
+    "files": [
+      "out/**/*"
+    ]
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@types/jest": "^26.0.23",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "@types/webpack-dev-server": "^3.11.4",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.4",
+    "electron": "^12.0.7",
+    "electron-builder": "^22.10.5",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.3",
+    "nodemon-webpack-plugin": "^4.5.2",
+    "prettier": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-refresh": "^0.10.0",
+    "react-refresh-typescript": "^2.0.0",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^26.5.6",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.0",
+    "webpack-bundle-analyzer": "^4.4.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
